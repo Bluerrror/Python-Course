@@ -66,9 +66,6 @@ By the end of this course, you will be able to:
   - `Scikit-learn`
   - `Rasterio`
   
-## 📢 Join the Community
-
-Feel free to join our community discussions on [GitHub Discussions](https://github.com/yourusername/your-repo/discussions) or follow along with our updates on [Twitter](https://twitter.com/yourhandle).
 
 ## 🤝 Contributing
 
