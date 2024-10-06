@@ -27,6 +27,7 @@ By the end of this course, you will be able to:
 6. **Choosing an IDE**
    - PyCharm
    - VSCode
+   - Jupyter lab/notebook
 7. **Writing Your First Python Program**
 8. **Using GitHub**
 9. **Common Issues and Troubleshooting**
