@@ -1,6 +1,6 @@
 # 🌱 Python for Agrohydrology and Soil Science
 
-Welcome to the **Python for Agrohydrology and Soil Science** course! This course is designed to take you from the ground up in Python programming, focusing on its applications in agrohydrology, soil science, GIS, machine learning, model integration, and remote sensing.
+Welcome to the **Python for Agrohydrology and Soil Science** course! This course is designed to take you from the ground up in Python programming, focusing on its applications in agrohydrology and soil science..
 
 ## 📚 Course Overview
 
@@ -65,6 +65,7 @@ By the end of this course, you will be able to:
   - `GeoPandas`
   - `Scikit-learn`
   - `Rasterio`
+  - etc.
   
 
 ## 🤝 Contributing
