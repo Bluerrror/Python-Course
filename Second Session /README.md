@@ -23,6 +23,13 @@ Best Practices: Guidelines for writing clean, efficient, and maintainable Python
 🚀 Getting Started
 The primary learning resource for this course is the presentation "Getting Started with Python: Syntax, Functions, and Classes," available in the repository. This presentation provides detailed explanations and code examples for each topic.
 
+💻 Resources
+The following resources are recommended for supplemental learning and further exploration:
+
+Official Python Documentation: https://docs.python.org/3/
+Online Tutorials: Codecademy, Coursera
+JupyterLab Documentation: https://jupyterlab.readthedocs.io/en/stable/
+Anaconda Documentation: https://docs.anaconda.com/anaconda/
 🤝 Contributing
 Contributions are welcome! If you find any errors, have suggestions for improvements, or want to add additional content, please open an issue or submit a pull request.
 
