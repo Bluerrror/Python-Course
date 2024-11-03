@@ -1,4 +1,4 @@
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]([https://colab.research.google.com/drive/1Dk8oW2t3bYOc2kPSa1mC34FnSNt986wf])
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Dk8oW2t3bYOc2kPSa1mC34FnSNt986wf)
 
 # 📚 Introduction to Python Packages
 
