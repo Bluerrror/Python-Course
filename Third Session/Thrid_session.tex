@@ -1,0 +1,453 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{fontawesome}
+\usepackage{tikz}
+\usepackage{caption}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{tcolorbox}
+
+% Define custom colors
+\definecolor{darkblue}{RGB}{0, 51, 102}
+\definecolor{lightblue}{RGB}{173, 216, 230}
+\definecolor{orange}{RGB}{255, 165, 0}
+\definecolor{darkgray}{RGB}{50, 50, 50}
+
+% Custom header and footer
+\setbeamercolor{item}{fg=darkblue}
+\setbeamercolor{block title}{bg=darkblue, fg=white}
+\setbeamercolor{block body}{bg=lightblue, fg=black}
+
+% Font settings
+\usefonttheme{professionalfonts} % Use professional fonts
+\usepackage{lmodern} % Latin Modern font
+
+% Code styling
+\lstset{
+    basicstyle=\ttfamily\footnotesize,
+    backgroundcolor=\color{lightblue},
+    frame=single,
+    rulecolor=\color{darkblue},
+    keywordstyle=\color{orange}\bfseries,
+    commentstyle=\color{darkgray},
+    stringstyle=\color{darkgray},
+    numbers=left,
+    numberstyle=\tiny\color{darkgray},
+    stepnumber=1,
+    numbersep=5pt,
+    tabsize=2,
+    breaklines=true
+}
+
+\title{\textbf{Getting Started with Python: Syntax, Functions, and Classes}}
+\author{\textbf{Shahab A. Shojaeezadeh} \\ \faEnvelope \, shahab2710@gmail.com \\ \faGithub \, github.com/shahab271069}
+\date{November 04, 2024}
+
+
+% Course name
+\newcommand{\courseName}{Introduction to Programming with Python}
+
+% Logo path definitions
+\newcommand{\logoOne}{boku.png} % Change this to your logo path
+\newcommand{\logoTwo}{uni-kassel.png} % Change this to your logo path
+
+% Custom footline with course name on left and page number on right
+\setbeamertemplate{footline}{
+    \begin{beamercolorbox}[wd=\textwidth,ht=2ex,dp=0ex]{}
+        \textcolor{darkblue}{\courseName} % Course name on the left
+        \hspace{5pt} % Space below logos
+        \vspace{2pt} % Space below logos
+        \hfill
+        \textcolor{darkblue}{\insertframenumber} / \inserttotalframenumber % Page number on the right
+        \hspace{2pt} % Space below logos
+        \vspace{2pt} % Space below logos
+    \end{beamercolorbox}
+}
+
+\begin{document}
+% Title page with logos
+\begin{frame}[plain] % Use plain option to avoid default header/footer
+    \begin{center}
+        \includegraphics[height=1.5cm]{\logoOne} % Left logo
+        \hfill
+        \includegraphics[height=1.5cm]{\logoTwo} % Right logo
+        %\vspace{5pt} % Space below logos
+        \titlepage
+    \end{center}
+\end{frame}
+
+% Remove header for other frames
+\setbeamertemplate{headline}{}
+
+% Agenda
+\begin{frame}
+    \frametitle{Agenda}
+    \begin{itemize}
+        \item Importing Packages
+        \item Using `os`
+        \item Using `glob`
+        \item Using `numpy`
+        \item Using `scipy`
+        \item Using `matplotlib`
+        \item Using `pandas`
+        \item Summary and Questions
+    \end{itemize}
+\end{frame}
+
+% Importing Packages
+\begin{frame}
+    \frametitle{Importing Packages}
+    \begin{itemize}
+        \item Use the \texttt{import} statement
+        \item Example:
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Import Example]
+            \lstinline|import os| \\
+            \lstinline|import pandas as pd| \\
+            \lstinline|import glob| \\
+            \lstinline|import matplotlib.pyplot as plt| \\
+            \lstinline|import numpy as np| \\
+            \lstinline|from scipy import stats|
+        \end{tcolorbox}
+    \end{itemize}
+\end{frame}
+
+% Using `os`
+\begin{frame}
+    \frametitle{Using `os` Package}
+    \begin{itemize}
+        \item Interact with the operating system
+        \item Example: Listing files in a directory
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=List Files]
+            \lstinline|import os| \\
+            \lstinline|files = os.listdir(".")| \\
+            \lstinline|print(files)|
+        \end{tcolorbox}
+    \end{itemize}
+\end{frame}
+
+% Using `os` - Check File Existence
+\begin{frame}
+    \frametitle{Using `os` - Check File Existence}
+    \begin{itemize}
+        \item Check if a file exists
+        \item Example:
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Check File]
+            \lstinline|if os.path.exists("file.txt"):| \\
+            \hspace{10pt} \lstinline|print("File exists")|
+        \end{tcolorbox}
+    \end{itemize}
+\end{frame}
+
+% Using `os` - Create a Directory
+\begin{frame}
+    \frametitle{Using `os` - Create a Directory}
+    \begin{itemize}
+        \item Create a new directory
+        \item Example:
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Create Directory]
+            \lstinline|os.mkdir("new_folder")| \\
+            \lstinline|print("Directory created")|
+        \end{tcolorbox}
+    \end{itemize}
+\end{frame}
+
+% Using `os` - Remove a File
+\begin{frame}
+    \frametitle{Using `os` - Remove a File}
+    \begin{itemize}
+        \item Delete a file
+        \item Example:
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Remove File]
+            \lstinline|os.remove("file.txt")| \\
+            \lstinline|print("File removed")|
+        \end{tcolorbox}
+    \end{itemize}
+\end{frame}
+
+% Using `os` - Get Current Working Directory
+\begin{frame}
+    \frametitle{Using `os` - Get Current Working Directory}
+    \begin{itemize}
+        \item Get the current working directory
+        \item Example:
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Current Directory]
+            \lstinline|cwd = os.getcwd()| \\
+            \lstinline|print(cwd)|
+        \end{tcolorbox}
+    \end{itemize}
+\end{frame}
+
+% Using `glob`
+\begin{frame}
+    \frametitle{Using `glob` Package}
+    \begin{itemize}
+        \item Find all the pathnames matching a specified pattern
+        \item Example: List all .txt files
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Glob Example]
+            \lstinline|import glob| \\
+            \lstinline|files = glob.glob("*.txt")| \\
+            \lstinline|print(files)|
+        \end{tcolorbox}
+    \end{itemize}
+\end{frame}
+
+% Using `glob` - Recursively Finding Files
+\begin{frame}
+    \frametitle{Using `glob` - Recursively Finding Files}
+    \begin{itemize}
+        \item Search for files in subdirectories
+        \item Example:
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Recursive Search]
+            \lstinline|files = glob.glob("**/*.txt", recursive=True)| \\
+            \lstinline|print(files)|
+        \end{tcolorbox}
+    \end{itemize}
+\end{frame}
+
+% Using `numpy`
+\begin{frame}
+    \frametitle{Using `numpy` Package}
+    \begin{itemize}
+        \item Fundamental package for numerical computing
+        \item Example: Creating an array
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Create Array]
+            \lstinline|import numpy as np| \\
+            \lstinline|arr = np.array([1, 2, 3])| \\
+            \lstinline|print(arr)|
+        \end{tcolorbox}
+    \end{itemize}
+\end{frame}
+
+% Using `numpy` - Array Operations
+\begin{frame}
+    \frametitle{Using `numpy` - Array Operations}
+    \begin{itemize}
+        \item Perform operations on arrays
+        \item Example: Element-wise addition
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Array Addition]
+            \lstinline|arr1 = np.array([1, 2, 3])| \\
+            \lstinline|arr2 = np.array([4, 5, 6])| \\
+            \lstinline|result = arr1 + arr2| \\
+            \lstinline|print(result)|
+        \end{tcolorbox}
+    \end{itemize}
+\end{frame}
+
+% Using `numpy` - Statistical Functions
+\begin{frame}
+    \frametitle{Using `numpy` - Statistical Functions}
+    \begin{itemize}
+        \item Perform statistical calculations
+        \item Example: Mean and Standard Deviation
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Statistics]
+            \lstinline|mean = np.mean(arr)| \\
+            \lstinline|std_dev = np.std(arr)| \\
+            \lstinline|print(mean, std_dev)|
+        \end{tcolorbox}
+    \end{itemize}
+\end{frame}
+
+% Using `numpy` - Reshape Array
+\begin{frame}
+    \frametitle{Using `numpy` - Reshape Array}
+    \begin{itemize}
+        \item Change the shape of an array
+        \item Example:
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Reshape Array]
+            \lstinline|reshaped = arr.reshape(3, 1)| \\
+            \lstinline|print(reshaped)|
+        \end{tcolorbox}
+    \end{itemize}
+\end{frame}
+
+% Using `scipy`
+\begin{frame}
+    \frametitle{Using `scipy` Package}
+    \begin{itemize}
+        \item Library for scientific computing
+        \item Example: Statistical tests
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Statistical Tests]
+            \lstinline|from scipy import stats| \\
+            \lstinline|t_statistic, p_value = stats.ttest_ind(sample1, sample2)| \\
+            \lstinline|print(t_statistic, p_value)|
+        \end{tcolorbox}
+    \end{itemize}
+\end{frame}
+
+% Using `scipy` - Optimization
+\begin{frame}
+    \frametitle{Using `scipy` - Optimization}
+    \begin{itemize}
+        \item Solve optimization problems
+        \item Example:
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Optimization Example]
+            \lstinline|from scipy.optimize import minimize| \\
+            \lstinline|result = minimize(fun, x0)| \\
+            \lstinline|print(result)| 
+        \end{tcolorbox}
+    \end{itemize}
+\end{frame}
+
+% Using `scipy` - Interpolation
+\begin{frame}
+    \frametitle{Using `scipy` - Interpolation}
+    \begin{itemize}
+        \item Perform interpolation on data
+        \item Example:
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Interpolation]
+            \lstinline|from scipy.interpolate import interp1d| \\
+            \lstinline|f = interp1d(x, y)| \\
+            \lstinline|new_y = f(new_x)| 
+        \end{tcolorbox}
+    \end{itemize}
+\end{frame}
+
+% Using `matplotlib`
+\begin{frame}
+    \frametitle{Using `matplotlib` Package}
+    \begin{itemize}
+        \item Create static, animated, and interactive visualizations
+        \item Example: Simple Line Plot
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Line Plot]
+            \lstinline|import matplotlib.pyplot as plt| \\
+            \lstinline|plt.plot([1, 2, 3], [4, 5, 6])| \\
+            \lstinline|plt.show()|
+        \end{tcolorbox}
+    \end{itemize}
+\end{frame}
+
+% Using `matplotlib` - Scatter Plot
+\begin{frame}
+    \frametitle{Using `matplotlib` - Scatter Plot}
+    \begin{itemize}
+        \item Create scatter plots
+        \item Example:
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Scatter Plot]
+            \lstinline|plt.scatter(x, y)| \\
+            \lstinline|plt.title("Scatter Plot")| \\
+            \lstinline|plt.xlabel("X-axis")| \\
+            \lstinline|plt.ylabel("Y-axis")| \\
+            \lstinline|plt.show()|
+        \end{tcolorbox}
+    \end{itemize}
+\end{frame}
+
+% Using `matplotlib` - Bar Plot
+\begin{frame}
+    \frametitle{Using `matplotlib` - Bar Plot}
+    \begin{itemize}
+        \item Create bar charts
+        \item Example:
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Bar Plot]
+            \lstinline|plt.bar(["A", "B", "C"], [1, 2, 3])| \\
+            \lstinline|plt.title("Bar Plot")| \\
+            \lstinline|plt.show()|
+        \end{tcolorbox}
+    \end{itemize}
+\end{frame}
+
+% Using `matplotlib` - Histogram
+\begin{frame}
+    \frametitle{Using `matplotlib` - Histogram}
+    \begin{itemize}
+        \item Create histograms
+        \item Example:
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Histogram]
+            \lstinline|plt.hist(data)| \\
+            \lstinline|plt.title("Histogram")| \\
+            \lstinline|plt.show()|
+        \end{tcolorbox}
+    \end{itemize}
+\end{frame}
+
+
+% Using `pandas`
+\begin{frame}
+    \frametitle{Using `pandas` Package}
+    \begin{itemize}
+        \item Data manipulation and analysis
+        \item Example: Reading a CSV file
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Read CSV]
+            \lstinline|import pandas as pd| \\
+            \lstinline|data = pd.read_csv("data.csv")| \\
+            \lstinline|print(data.head())|
+        \end{tcolorbox}
+    \end{itemize}
+\end{frame}
+
+% Using `pandas` - DataFrame Operations
+\begin{frame}
+    \frametitle{Using `pandas` - DataFrame Operations}
+    \begin{itemize}
+        \item Perform operations on DataFrames
+        \item Example: Filtering Data
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Filter DataFrame]
+            \lstinline|filtered = data[data["column"] > 10]| \\
+            \lstinline|print(filtered)|
+        \end{tcolorbox}
+    \end{itemize}
+\end{frame}
+
+% Using `pandas` - Group By
+\begin{frame}
+    \frametitle{Using `pandas` - Group By}
+    \begin{itemize}
+        \item Group data by a specific column
+        \item Example:
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Group By]
+            \lstinline|grouped = data.groupby("column").mean()| \\
+            \lstinline|print(grouped)|
+        \end{tcolorbox}
+    \end{itemize}
+\end{frame}
+
+% Using `pandas` - Merging DataFrames
+\begin{frame}
+    \frametitle{Using `pandas` - Merging DataFrames}
+    \begin{itemize}
+        \item Combine multiple DataFrames
+        \item Example:
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Merging DataFrames]
+            \lstinline|merged = pd.merge(df1, df2, on="key")| \\
+            \lstinline|print(merged)|
+        \end{tcolorbox}
+    \end{itemize}
+\end{frame}
+
+% Using `pandas` - Saving DataFrame
+\begin{frame}
+    \frametitle{Using `pandas` - Saving DataFrame}
+    \begin{itemize}
+        \item Save DataFrame to CSV
+        \item Example:
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Save DataFrame]
+            \lstinline|data.to_csv("output.csv", index=False)|
+        \end{tcolorbox}
+    \end{itemize}
+\end{frame}
+
+% Summary
+\begin{frame}
+    \frametitle{Summary}
+    \begin{itemize}
+        \item Covered essential Python packages
+        \item Demonstrated code examples for each package
+        \item Discussed practical applications
+    \end{itemize}
+\end{frame}
+
+% Questions
+\begin{frame}
+    \frametitle{Questions?}
+    \begin{center}
+        Thank you for your attention! \\
+        Any questions?
+    \end{center}
+\end{frame}
+
+\end{document}
