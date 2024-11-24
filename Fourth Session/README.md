@@ -11,7 +11,7 @@ By the end of this notebook, you will be able to:
 - Perform geospatial data manipulations using **GeoPandas**.
 - Read and write raster data with **Rasterio**.
 - Handle multi-dimensional datasets using **Xarray**.
-- Visualize geospatial data effectively with **Matplotlib** and **Folium**.
+- Visualize geospatial data effectively with **Matplotlib**.
 
 ## 📅 Table of Contents
 
