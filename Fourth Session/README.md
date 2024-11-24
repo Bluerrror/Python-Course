@@ -29,7 +29,7 @@ To get started, simply run each cell in the notebook. Each section includes exam
 Ensure you have the required packages installed. You can install them using pip if they are not already installed:
 
 ``` bash
-pip install geopandas rasterio xarray matplotlib folium
+pip install geopandas rasterio xarray matplotlib
 ``` 
 ## 💻 Resources
 Official Python Documentation
