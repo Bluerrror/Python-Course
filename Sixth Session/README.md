@@ -68,7 +68,7 @@ GEE offers a cloud-based geospatial computation platform to analyze and visualiz
 
 ## 💻 Resources
 
-- [Cubo Documentation](https://docs.cubo.com)
+- [Cubo Documentation](https://github.com/ESDS-Leipzig/cubo)
 - [STAC Specification](https://stacspec.org/)
 - [Google Earth Engine API](https://developers.google.com/earth-engine/)
 - [GeoPandas](https://geopandas.org/)
