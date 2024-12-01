@@ -35,11 +35,6 @@ By the end of this course, you will:
 
 Clone this repository and install the required dependencies:
 
-\`\`\`bash
-git clone https://github.com/your-repo-name/remote-sensing.git
-cd remote-sensing
-pip install -r requirements.txt
-\`\`\`
 
 Install additional packages as needed for **Cubo** or **GEE**:
 \`\`\`bash
