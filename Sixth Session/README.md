@@ -37,9 +37,9 @@ Clone this repository and install the required dependencies:
 
 
 Install additional packages as needed for **Cubo** or **GEE**:
-\`\`\`bash
+```bash
 pip install cubo-stac-api earthengine-api
-\`\`\`
+```
 
 ### Using the Notebook
 
