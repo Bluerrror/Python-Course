@@ -36,7 +36,6 @@ By the end of this course, you will:
 Clone this repository and install the required dependencies:
 
 ```
-bash
 pip install numpy pandas matplotlib geopandas cubo[ee] pyet
 ```
 
