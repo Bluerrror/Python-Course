@@ -33,17 +33,19 @@ In this course, you will learn:
    - Introduction to GIS concepts
    - Using libraries like `GeoPandas` and `Shapely`
 
-4. **Machine Learning Basics**
+4. **Remote Sensing Applications**
+   - Fundamentals of remote sensing
+   - Analyzing satellite imagery with `Rasterio`
+
+5. **Machine Learning Basics**
    - Overview of machine learning
    - Implementing algorithms with `scikit-learn`
 
-5. **Model Integration and Development**
+6. **Model Integration and Development**
    - Techniques for model integration
    - Case studies and practical examples
 
-6. **Remote Sensing Applications**
-   - Fundamentals of remote sensing
-   - Analyzing satellite imagery with `Rasterio`
+
 
 ## 📈 Learning Outcomes
 
