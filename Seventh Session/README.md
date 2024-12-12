@@ -50,23 +50,23 @@ Open the provided Jupyter Notebook to start exploring the water cycle and drough
 - Learn how to compute key drought and aridity indices:
 
 ## Standardized Precipitation Index (SPI)
-Palmer Drought Severity Index (PDSI)
-De Martonne Aridity Index (AI)
-Crop Water Stress Index (CWSI)
-🌐 Tools in Action
-Drought Analysis
-Utilize Python to analyze the effects of drought on agricultural productivity and soil health.
+- Palmer Drought Severity Index (PDSI)
+- De Martonne Aridity Index (AI)
+- Crop Water Stress Index (CWSI)
+## 🌐 Tools in Action
+- Drought Analysis
+- Utilize Python to analyze the effects of drought on agricultural productivity and soil health.
 
 ## Visualization
 Use Matplotlib and GeoPandas to visualize data related to the water cycle and drought conditions.
 
 ## 💻 Resources
-Water Cycle Overview
-Drought Information
-Python Libraries Documentation
-ERA5 Climate Data
-🤝 Contributing
+-Water Cycle Overview
+-Drought Information
+-Python Libraries Documentation
+-ERA5 Climate Data
+## 🤝 Contributing
 Contributions are welcome! If you have suggestions for new features, corrections, or additional examples, feel free to open an issue or submit a pull request.
 
-📝 License
+## 📝 License
 This project is licensed under the MIT License. See the LICENSE file for details.
