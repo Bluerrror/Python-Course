@@ -1,0 +1,346 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{fontawesome}
+\usepackage{tikz}
+\usepackage{caption}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{tcolorbox}
+
+% Define custom colors
+\definecolor{darkblue}{RGB}{0, 51, 102}
+\definecolor{lightblue}{RGB}{173, 216, 230}
+\definecolor{orange}{RGB}{255, 165, 0}
+\definecolor{darkgray}{RGB}{50, 50, 50}
+
+% Custom header and footer
+\setbeamertemplate{footline}[frame number]
+\setbeamercolor{item}{fg=darkblue}
+\setbeamercolor{block title}{bg=darkblue, fg=white}
+\setbeamercolor{block body}{bg=lightblue, fg=black}
+
+% Font settings
+\usefonttheme{professionalfonts} % Use professional fonts
+\usepackage{lmodern} % Latin Modern font
+
+% Code styling
+\lstset{
+    basicstyle=\ttfamily\footnotesize,
+    backgroundcolor=\color{lightblue},
+    frame=single,
+    rulecolor=\color{darkblue},
+    keywordstyle=\color{orange}\bfseries,
+    commentstyle=\color{darkgray},
+    stringstyle=\color{darkgray},
+    numbers=left,
+    numberstyle=\tiny\color{darkgray},
+    stepnumber=1,
+    numbersep=5pt,
+    tabsize=2,
+    breaklines=true
+}
+
+\title{\textbf{Getting Started with Python}}
+\author{\textbf{Shahab A. Shojaeezadeh} \\ \faEnvelope \, shahab2710@gmail.com \\ \faGithub \, github.com/shahab271069}
+\date{October 14, 2024}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+    \frametitle{Agenda}
+    \begin{itemize}
+        \item Introduction to Python
+        \item Installing Python
+        \item Setting up a Virtual Environment
+        \item Using Conda
+        \item Installing JupyterLab/Notebook
+        \item Installing IDEs
+        \item Writing Your First Python Program
+        \item Using GitHub
+        \item Resources for Learning
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{What is Python?}
+    \begin{itemize}
+        \item High-level programming language
+        \item Interpreted and easy to learn
+        \item Widely used in web development, data science, automation, etc.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Why Use Python?}
+    \begin{itemize}
+        \item Extensive libraries and frameworks
+        \item Large community support
+        \item Versatile and powerful
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{System Requirements}
+    \begin{itemize}
+        \item Windows, macOS, or Linux
+        \item Internet connection for downloads
+        \item Basic command line knowledge
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Downloading Python}
+    \begin{itemize}
+        \item Visit the official Python website: \texttt{python.org}
+        \item Click on the \textbf{"Downloads"} section
+        \item Choose the appropriate version for your OS
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Installing Python on Windows}
+    \begin{itemize}
+        \item Run the installer
+        \item Check \texttt{"Add Python to PATH"}
+        \item Follow the installation prompts
+        \item Install necessary packages:
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Install Packages]
+            \lstinline|pip install numpy pandas matplotlib|
+        \end{tcolorbox}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Installing Python on macOS}
+    \begin{itemize}
+        \item Open the downloaded \texttt{.pkg} file
+        \item Follow the installation instructions
+        \item Verify installation with:
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Verify Installation]
+            \lstinline|python3 --version|
+        \end{tcolorbox}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Installing Python on Linux}
+    \begin{itemize}
+        \item Use the package manager (e.g., APT for Ubuntu)
+        \item Command:
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Install Python]
+            \lstinline|sudo apt install python3 python3-pip|
+        \end{tcolorbox}
+        \item Verify installation:
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Verify Installation]
+            \lstinline|python3 --version|
+        \end{tcolorbox}
+        \item Install necessary packages:
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Install Packages]
+            \lstinline|pip3 install numpy pandas matplotlib|
+        \end{tcolorbox}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Using Conda}
+    \begin{itemize}
+        \item Install Anaconda or Miniconda from \texttt{anaconda.com}
+        \item Create a new environment:
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Create Environment]
+            \lstinline|conda create --name myenv python=3.x|
+        \end{tcolorbox}
+        \item Activate the environment:
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Activate Environment]
+            \lstinline|conda activate myenv|
+        \end{tcolorbox}
+        \item Install packages:
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Install Packages]
+            \lstinline|conda install numpy pandas matplotlib|
+        \end{tcolorbox}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Installing JupyterLab/Notebook}
+    \begin{itemize}
+        \item Install via pip:
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Install Jupyter Notebook]
+            \lstinline|pip install notebook| \text{ (for Jupyter Notebook)}
+        \end{tcolorbox}
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Install JupyterLab]
+            \lstinline|pip install jupyterlab| \text{ (for JupyterLab)}
+        \end{tcolorbox}
+        
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Installing JupyterLab/Notebook}
+    \begin{itemize}
+    \item Install via Conda:
+            \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Install Jupyter Notebook]
+                \lstinline|conda install -c conda-forge notebook| \text{ (for Jupyter Notebook)}
+            \end{tcolorbox}
+            \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Install JupyterLab]
+                \lstinline|conda install -c conda-forge jupyterlab| \text{ (for JupyterLab)}
+            \end{tcolorbox}
+            \item Launch Jupyter:
+            \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Launch Jupyter]
+                \lstinline|jupyter notebook| \text{ or } \lstinline|jupyter lab|
+            \end{tcolorbox}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Setting Up a Virtual Environment}
+    \begin{itemize}
+        \item Use virtual environments to manage dependencies
+        \item Command:
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Create Virtual Environment]
+            \lstinline|python -m venv myenv|
+        \end{tcolorbox}
+        \item Activate the environment:
+        \begin{itemize}
+            \item Windows:
+            \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Activate Windows]
+                \lstinline|myenv\textbackslash Scripts\textbackslash activate|
+            \end{tcolorbox}
+            \item macOS/Linux:
+            \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Activate macOS/Linux]
+                \lstinline|source myenv/bin/activate|
+            \end{tcolorbox}
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Installing Packages with pip}
+    \begin{itemize}
+        \item \texttt{pip} is the package installer for Python
+        \item Command to install a package:
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Install Package]
+            \lstinline|pip install package_name|
+        \end{tcolorbox}
+        \item Example:
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Install Numpy]
+            \lstinline|pip install numpy|
+        \end{tcolorbox}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Choosing an IDE}
+    \begin{itemize}
+        \item Popular IDEs:
+        \begin{itemize}
+            \item \textbf{PyCharm}
+            \item \textbf{VSCode}
+            \item \textbf{Jupyter Notebook/Lab}
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Installing PyCharm}
+    \begin{itemize}
+        \item Download from \texttt{jetbrains.com/pycharm}
+        \item Choose Community edition for free version
+        \item Follow installation steps
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Installing VSCode}
+    \begin{itemize}
+        \item Download from \texttt{code.visualstudio.com}
+        \item Follow installation instructions
+        \item Install Python extension from the marketplace
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Writing Your First Python Program}
+    \begin{itemize}
+        \item Open your IDE
+        \item Create a new file: \texttt{hello.py}
+        \item Write:
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Hello World Program]
+            \lstinline|print("Hello, World!")|
+        \end{tcolorbox}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Running Your Python Program}
+    \begin{itemize}
+        \item Open terminal/command prompt
+        \item Navigate to the file location
+        \item Run:
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Run Program]
+            \lstinline|python hello.py|
+        \end{tcolorbox}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Using GitHub}
+    \begin{itemize}
+        \item Create a GitHub account: \texttt{github.com}
+        \item Install Git:
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Install Git]
+            \lstinline|sudo apt install git| \text{ (Linux)}
+        \end{tcolorbox}
+        \begin{tcolorbox}[colback=lightblue, colframe=darkblue, title=Clone Repository]
+            \lstinline|git clone <repository_url>|
+        \end{tcolorbox}
+        
+        \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Common Issues}
+    \begin{itemize}
+        \item Installation errors
+        \item PATH issues
+        \item Package conflicts
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Helpful Resources}
+    \begin{itemize}
+        \item Official Python Documentation: \texttt{docs.python.org}
+        \item Online tutorials: Codecademy, Coursera
+        \item Community forums: Stack Overflow, Reddit
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Summary}
+    \begin{itemize}
+        \item Python is easy to install and use
+        \item Conda provides a robust package management system
+        \item JupyterLab/Notebook is great for interactive coding
+        \item GitHub enhances collaboration in coding projects
+        \item Many resources available to help you learn
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Questions?}
+    \begin{center}
+        Thank you! Any questions?
+    \end{center}
+\end{frame}
+
+\end{document}
